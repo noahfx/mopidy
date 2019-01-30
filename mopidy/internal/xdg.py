@@ -60,7 +60,6 @@ def _get_user_dirs(xdg_config_dir):
     data = data.replace(b'"', b'')
 
     config = configparser.RawConfigParser()
-
     config.read_file(io.BytesIO(data).getvalue().decode('utf-8'))
 
     return {
